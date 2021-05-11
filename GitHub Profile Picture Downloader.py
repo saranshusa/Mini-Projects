@@ -1,3 +1,5 @@
+# This program downloads the github profile picture of the provided username.
+
 import requests
 from bs4 import BeautifulSoup as BS
 
