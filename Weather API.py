@@ -21,14 +21,14 @@ city = weatherData['name']
 country = weatherData['sys']['country']
 wind = weatherData['wind']['speed']
 
-print(f'\nCity:\t{city}\n\
+print(f'\nCity:\t\t{city}\n\
 Country:\t{country}\n\
 Weather:\t{weather}\n\
 Temperature:\t{temperature:.1f} {degree}C\n\
-Max:\t{maxTemperature:.1f} {degree}C\n\
-Min:\t{minTemperature:.1f} {degree}C\n\
+Max:\t\t{maxTemperature:.1f} {degree}C\n\
+Min:\t\t{minTemperature:.1f} {degree}C\n\
 Humidity:\t{humidity} %\n\
-Wind:\t{wind} km/h\n')
+Wind:\t\t{wind} km/h\n')
 
 print(f'It feels like {feelsLike:.1f} {degree}C and there will be {weatherDescription}.')
 sleep(10)
