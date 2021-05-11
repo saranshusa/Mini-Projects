@@ -6,12 +6,16 @@ import os
 
 def main():
     ctr = 0
-    path = input('Enter path of the folder which contains the files to be renamed:\
-        \nEg. C:/Users/Saransh/Documents/\t:\t ')
-    
-    # Checks for path error
-    if '\\' in path:
-        print('\nERROR ! Use forward slash in path name (/)')
+    pathIsCorrect = True
+    while pathIsCorrect:
+        path = input('Enter path of the folder which contains the files to be renamed:\
+            \nEg. C:/Users/Saransh/Documents/\t:\t ')
+        
+        # Checks for path error
+        if '\\' in path:
+            print('\nERROR ! Use forward slash in path name (/)\n')
+        elif not '\\' in path:
+            pathIsCorrect = False
     
     base = input('\nEnter base file name:\t')
     extension = input('\nEnter file extension name (Eg: .png):\t')
