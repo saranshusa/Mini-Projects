@@ -145,4 +145,12 @@ button:nth-child(20) {
   .empty {
     background-color: #ffffff00;
   }
+
+  .operator,
+  .number,
+  .empty {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+  }
 }
