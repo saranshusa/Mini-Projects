@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+body {
+  font-family: "Open sans", sans-serif;
+  margin: 0;
+}
+
+.main-app {
+  background: rgba(34, 219, 117, 0.4) url("background.jpg");
+  background-size: 100%;
+  background-position: 50% 100%;
+  color: aquamarine;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.calculator {
+  width: 320px;
+  height: 520px;
+  top: 50%;
+  left: 50%;
+  margin-top: -260px;
+  margin-left: -160px;
+  position: absolute;
+  background-color: #eaedef;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 cadetblue;
+}
+
+.result {
+  height: 120px;
+}
+
+.history {
+  text-align: right;
+  height: 20px;
+  margin: 0 20px;
+  padding-top: 20px;
+  font-size: 15px;
+  color: #919191;
+}
+
+.output {
+  text-align: right;
+  height: 60px;
+  margin: 10px 20px;
+  font-size: 30px;
+  color: black;
+}
+
+.keyboard {
+  height: 400px;
+}
+
+.operator,
+.number,
+.empty {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+  float: left;
+  border-radius: 50%;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.number,
+.empty {
+  background-color: #eaedef;
+}
+
+.number,
+.operator {
+  cursor: pointer;
+}
+
+.operator:active,
+.number:active {
+  font-size: 14px;
+}
+
+.operator:focus,
+.number:focus,
+.empty:focus {
+  outline: 0;
+}
+
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3) {
+  font-size: 20px;
+  background-color: #c0c0c0;
+}
+
+button:nth-child(4) {
+  font-size: 20px;
+  background-color: #20b2aa;
+}
+button:nth-child(8) {
+  font-size: 20px;
+  background-color: #ffa500;
+}
+button:nth-child(12) {
+  font-size: 20px;
+  background-color: #f08080;
+}
+button:nth-child(16) {
+  font-size: 20px;
+  background-color: #7d93e0;
+}
+button:nth-child(20) {
+  font-size: 20px;
+  background-color: #9477af;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 98%;
+    height: 98%;
+    top: 1%;
+    left: 1%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
