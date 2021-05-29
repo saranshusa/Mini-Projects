@@ -115,7 +115,7 @@ button:nth-child(20) {
   background-color: #9477af;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .calculator {
     width: 98%;
     height: 98%;
@@ -123,5 +123,22 @@ button:nth-child(20) {
     left: 1%;
     margin-top: 0;
     margin-left: 0;
+    background-color: #ffffffd7;
+  }
+
+  .keyboard {
+    width: 320px;
+    height: 520px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+
+  .number {
+    background-color: #dbdbdb;
+  }
+
+  .empty {
+    background-color: #ffffff00;
   }
 }
