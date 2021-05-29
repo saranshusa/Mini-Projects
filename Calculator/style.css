@@ -116,6 +116,10 @@ button:nth-child(20) {
 }
 
 @media (max-width: 480px) {
+  .main-app {
+    background: rgba(34, 219, 117, 0.4) url("background_V.jpg");
+    background-size: 125%;
+  }
   .calculator {
     width: 98%;
     height: 98%;
