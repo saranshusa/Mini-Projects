@@ -1,4 +1,8 @@
 <head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
   <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -24,21 +28,23 @@
       font-family: "Lato", sans-serif;
       line-height: 1.5;
       color: #111;
+      background: url("https://picsum.photos/1600/900/?blur");
     }
 
     main {
-      max-width: 720px;
+      max-width: 1000px;
       width: 100%;
-      border: 2.5px solid #330867;
+      border: none;
       border-radius: 2.5px;
       box-shadow: 0 10px 20px rgba(17, 17, 17, 0.125),
         0 5px 5px rgba(17, 17, 17, 0.25);
-      background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+      background-image: linear-gradient(to top, #db7c2f 0%, #11b811 100%);
     }
 
     h1 {
       padding: 1rem;
       color: white;
+      text-align: center;
     }
 
     input,
@@ -59,15 +65,41 @@
       display: flex;
     }
 
-    button {
+    button,
+    .buttons {
       cursor: pointer;
       flex: 1;
       background-color: transparent;
       color: white;
+      height: 50px;
+      font-size: 30px;
+      margin: auto;
+      text-align: center;
+      justify-content: center;
     }
 
     button:hover {
       background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .copybtn {
+      width: 55px;
+      height: 55px;
+      background: darkgray;
+      margin: auto;
+      border-radius: 50px;
+      flex: none;
+    }
+
+    #copybutton {
+      font-size: 28px;
+      color: #111;
+      font-family: cursive;
+      text-align: center;
+    }
+
+    .output {
+      display: block;
     }
 
     section {
@@ -87,7 +119,14 @@
     </div>
   </form>
 
-  <section id="section"><h2></h2></section>
+  <section id="section">
+    <div class="output">
+      <h2 id="copybutton"></h2>
+      <button class="copybtn" onclick="copyFunction();">
+        <i class="fa fa-copy" style="font-size: 24px; color: black"></i>
+      </button>
+    </div>
+  </section>
 </main>
 
 <script type="text/javascript">
@@ -106,4 +145,13 @@
       },
     });
   });
+</script>
+
+<script type="text/javascript">
+  function copyFunction() {
+    var copyText = document.getElementById("copybutton").innerHTML;
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+  }
 </script>
