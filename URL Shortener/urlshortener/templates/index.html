@@ -35,7 +35,7 @@
       max-width: 1000px;
       width: 100%;
       border: none;
-      border-radius: 2.5px;
+      border-radius: 50px;
       box-shadow: 0 10px 20px rgba(17, 17, 17, 0.125),
         0 5px 5px rgba(17, 17, 17, 0.25);
       background-image: linear-gradient(to top, #db7c2f 0%, #11b811 100%);
@@ -79,6 +79,7 @@
     }
 
     button:hover {
+      height: 66px;
       background-color: rgba(255, 255, 255, 0.5);
     }
 
@@ -106,16 +107,29 @@
       min-height: 120px;
       text-align: center;
       background-color: white;
+      border-radius: 0 0 50px 50px;
+    }
+
+    .credits {
+      display: block;
+      position: absolute;
+      margin-top: 45%;
+      font-size: medium;
+      font-weight: 600;
+      font-family: monospace;
+      background-color: aquamarine;
+      padding: 5px 10px;
+      border-radius: 10px;
     }
   </style>
 </head>
 <main>
-  <h1>URL Shortener</h1>
+  <h1>Free URL Shortener</h1>
   <form id="post-form">
     {% csrf_token %}
     <input type="text" name="link" id="link" placeholder="Enter URL here" />
     <div class="buttons">
-      <button type="submit" id="shorten">Shorten</button>
+      <button type="submit" id="shorten">Click here to Shorten URL</button>
     </div>
   </form>
 
@@ -128,6 +142,7 @@
     </div>
   </section>
 </main>
+<div class="credits">Developed by SARANSH</div>
 
 <script type="text/javascript">
   $(document).on("submit", "#post-form", function (e) {
